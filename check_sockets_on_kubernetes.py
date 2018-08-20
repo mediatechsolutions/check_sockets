@@ -118,7 +118,7 @@ class Checker(object):
     def __add_performance_data(self, stats):
         for container, stats in stats.items():
             key_name = '%s.%s' % (container, stats['protocol'])
-            self.perf_data.insert(0, ('%s.open=%s;%s;%s;;\n' % (key_name, stats['open'], self.warning, self.critical)))
+            self.perf_data.insert(0, ('%s.open=%s;%s;%s;; ' % (key_name, stats['open'], self.warning, self.critical)))
 #            self.perf_data.insert(0, ('%s.waiting_to_close=%s;;;;' % (key_name, stats['waiting_to_close'])))
 
     def __calculate_performance_data(self, output):
